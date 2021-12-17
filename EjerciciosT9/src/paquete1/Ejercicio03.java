@@ -16,10 +16,30 @@ public class Ejercicio03 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int[] arreglo = {1, 10, 11, 12, 12, 13, 16, 2, 3, 4, 9, 10, 21};
-        int elementosArribaMedia;
-        int elementosAbajoMedia;
+        double[] arreglo = {1, 10, 11, 12, 12, 13, 16, 2, 3, 4, 9, 10, 21};
+        int elementosArribaMedia=0;
+        int elementosAbajoMedia=0;
+        double media_aritmetica = 0;
+        int suma = 0;
         
+        for (int i = 0; i < arreglo.length; i++) {
+            suma = suma + arreglo.length; 
+        }
+        media_aritmetica = suma/arreglo.length;
+            
+         for (int i = 0; i < arreglo.length; i++) {
+             if(arreglo[i] > media_aritmetica) {
+                 elementosArribaMedia = elementosArribaMedia + 1;
+             }else{
+                 if(arreglo[i] < media_aritmetica)
+                    elementosAbajoMedia = elementosAbajoMedia + 1;
+             }
+         } 
+        System.out.printf("Media: %.2f\nPor arriba de la media: %.2f\n"
+                + "Por abajo de la media: %.2f"
+                                                , media_aritmetica,
+                                                elementosArribaMedia,
+                                                elementosAbajoMedia);
     }
 
 }
