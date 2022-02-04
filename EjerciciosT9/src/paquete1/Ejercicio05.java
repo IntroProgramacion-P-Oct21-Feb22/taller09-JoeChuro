@@ -21,20 +21,29 @@ public class Ejercicio05 {
         Antes de analizar el presente ejercicio,
         usted debe revisar y entender lo desarrollado
         en el archivo Ayuda01.java del paquete2
-        */
+         */
         Scanner entrada = new Scanner(System.in);
         String[] estudiantes = {"Kimberly", "Hogan",
             "Teresa", "Luis", "Mark", "Jennifer",
             "Alcides"};
         String inicial;
         char inicialLetra;
+        String inicialValuada;
+        String inicialValuadados;
         boolean bandera = true;
+
         while (bandera) {
             System.out.println("Ingrese una letra");
             inicial = entrada.nextLine();
-            
+            inicialValuada = String.valueOf(inicial);
+            for (int i = 0; i < estudiantes.length; i++) {
+                inicialLetra = estudiantes[i].charAt(0);
+                inicialValuadados = String.valueOf(inicialLetra); 
+                if (inicialValuada.equals(inicialValuadados)) {
+                    bandera = false;
+                }
+            }
         }
-
     }
 
 }
